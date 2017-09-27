@@ -11,7 +11,7 @@ public class dd2
       christmas.setColor("Christmas Green");
       christmas.setIcecream(true);
       christmas.setInjured(false);
-      //System.out.println(christmas);
+      System.out.println(christmas);
       System.out.println("Holly, do you like Christmas?");
       System.out.println(christmas.answer("Holly, do you like Christmas?"));
 
