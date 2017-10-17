@@ -50,10 +50,9 @@ public class draw1 extends Application{
          lines.getChildren().add(newline5);
 
          lastx = lastx + 2;
-         // lines.getChildren().add(newline);
-//          lines.getChildren().add(newline2);
-//          lines.getChildren().add(newline3);
-         //lines.getChildren().add(newline5);
+          lines.getChildren().add(newline);
+          lines.getChildren().add(newline2);
+          lines.getChildren().add(newline3);
 
 
          x ++;
