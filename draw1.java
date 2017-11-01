@@ -9,7 +9,7 @@ import java.util.Random;
 public class draw1 extends Application{
 
    public void start(Stage primaryStage) {
-      Circle dot = new Circle(250, 250, 1, Color.BLACK);
+      Circle dot = new Circle(250, 250, 40, Color.BLACK);
       Group lines = new Group(dot);
 
       int x = 0;
