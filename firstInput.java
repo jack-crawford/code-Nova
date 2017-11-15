@@ -7,7 +7,9 @@ public class rectCalc {
    public static void main (String[] args) {
       
       Scanner input = new scanner(System.in);
-      
+      System.out.println("f name >>");
+      rectName = input.next();
+
       String rectName;
       int len, wid, perim, area;
       

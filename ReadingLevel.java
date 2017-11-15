@@ -3,14 +3,17 @@ import java.io.*;
 public class ReadingLevel {
 
    public static void main (String[] args) throws IOException {
-      FileReader file = new FileReader("filetoread.txt");
+      Scanner fileName = new Scanner(System.in);
+      System.out.print("file name >>");
+      String fileNameString = fileName.nextLine();
+
+      FileReader file = new FileReader(fileNameString);
       Scanner reader = new Scanner(file);
       String title = reader.nextLine();
       
       int wordcount = 0; int sentcount = 0; int syllablecount = 0; int lettercount = 0; double easeScore = 0.0; 
       String readingLevel = "?";
-      do {
-         
+      while(reader.hasNext()) {         
          String word = reader.next();
          //the number of syllables equal to the number of letters divided by 3
          wordcount ++;
@@ -21,7 +24,7 @@ public class ReadingLevel {
          if (lastchar.equals("!") || lastchar.equals(".") || lastchar.equals("?")) {
             sentcount ++;
          } 
-      } while(reader.hasNext());
+      } 
       
       lettercount = lettercount - sentcount;
       syllablecount = lettercount / 3;
