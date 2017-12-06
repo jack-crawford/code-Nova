@@ -73,11 +73,6 @@ public class draw1 extends Application{
       Group root = new Group(lines);
 
       Rectangle brown = new Rectangle(10,10, 650, 400);
-      // Rectangle white = new Rectangle(0,0, 660, 410);
-//       white.setStroke(Color.WHITE);
-//       white.setStrokeWidth(10);
-//       root.getChildren().add(white);
-      // white.setFill(Color.TRANSPARENT);
       brown.setStroke(Color.rgb(68,68,68));
       brown.setStrokeWidth(10);
       brown.setFill(Color.TRANSPARENT);

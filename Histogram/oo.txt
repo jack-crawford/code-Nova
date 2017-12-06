@@ -1,0 +1,11 @@
+Classes, Objects, and Applications
+
+Software design is an interesting, challenging and rewarding task. As a beginning student of computer science, you wrote programs that solved relatively simple problems. Much of your effort went into learning the syntax of a programming language such as Java: the language's reserved words, its data types, its constructs for selection and looping, and its input/output mechanisms.
+
+As your programs and the problems they solve become more complex it is important to follow a software design approach that modularizes your solutions.breaks them into coherent manageable sub-units. Software design was originally driven by an emphasis on actions. Programs were modularized by breaking them into subprograms or procedures/functions. A subprogram performs some calculations and returns information to the calling program, but it doesn't "remember" anything. In the late 1960s, researchers argued that this approach was too limiting and did not allow us to successfully represent the constructs needed to build complex systems.
+
+Two Norwegians, Kristen Nygaard and Ole-Johan Dahl, created Simula 67 in 1967. It was the first language to support object-oriented programming. Object-oriented languages promote the object as the prime modularization mechanism. Objects represent both information and behavior and can "remember" internal information from one use to the next. This crucial difference allows them to be used in many versatile ways. In 2001, Nygaard and Dahl received the Turing Award, sometimes referred to as the "Nobel Prize of Computing", for their work.
+
+The capability of objects to represent both information (the objects have attributes) and behavior (the objects have responsibilities) allows them to be used to represent "real world" entities as varied as bank accounts, genomes, and hobbits. The self-contained nature of objects makes them easy to implement, modify, and test for correctness.
+
+Object orientation is centered on classes and objects. Objects are the basic run-time entities used by applications. An object is an instantiation of a class; alternatively, a class defines the structure of its objects. In this section we review these object-oriented programming constructs, which we use to organize our programs.

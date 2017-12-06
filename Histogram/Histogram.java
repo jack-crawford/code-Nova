@@ -10,7 +10,7 @@ public class Histogram {
       row_size_count = new int[rows];
    }
    
-   public void inc_row(int row_num) {
+   public void submit(int row_num) {
       row_size_count[row_num] = row_size_count[row_num]+ 1;
       total ++;
    }
