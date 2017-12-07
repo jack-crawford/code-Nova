@@ -1,20 +1,19 @@
 package Histogram;
 public class ReadingLevelHistogram implements HistogramInterface {
 
-   int num_of_rows;
+   int ROW_COUNT;
    int total;
-   int longer_than_15;
+   int longer_than_rows;
    int[] row_size_count;
-   
+    
    public ReadingLevelHistogram(int rows) {
-      num_of_rows = rows;
-      row_size_count = new int[15];
+      row_size_count = new int[rows];
+      ROW_COUNT = rows;
    }
    
    public void submit(int row_num) {
-      //System.out.println(row_num);
-      if (row_num > 15) 
-         longer_than_15 ++;   
+      if (row_num > ROW_COUNT) 
+         longer_than_rows ++;   
       else {
          row_size_count[row_num - 1] = row_size_count[row_num - 1] + 1;
          
@@ -24,15 +23,17 @@ public class ReadingLevelHistogram implements HistogramInterface {
    int largest = 1;
 
    public String toString() {
+
       String to_return = "";
-      for(int i=0; i<num_of_rows; i++)
+      for(int i=0; i<ROW_COUNT - 1; i++)
          if (row_size_count[i] > largest)
             largest = row_size_count[i];
       
-      int weight = (int) ((largest - 1)/30);
-
+      int weight = (int) ((largest)/30);
+      if (weight == 0)
+         weight ++;
       to_return += "* = " + weight + "\n";
-      for(int i=0; i<num_of_rows; i++){
+      for(int i=0; i<ROW_COUNT-1; i++){
          
          to_return +=i+1+":"; 
          
@@ -42,7 +43,7 @@ public class ReadingLevelHistogram implements HistogramInterface {
          to_return+="\n";
         
       }
-      to_return += ">15: " + longer_than_15 + "\n" + "total words: " + total;
+      to_return += "> "+ROW_COUNT+": " + longer_than_rows + "\n" + "total words: " + total;
       return to_return;
    }
    

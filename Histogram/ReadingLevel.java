@@ -14,10 +14,9 @@ public class ReadingLevel {
       String title = reader.nextLine();
       String body = "";
       HistogramInterface wordCount = new ReadingLevelHistogram(15);
-      String readingLevel = "?";
-      while(reader.hasNext()) {
+      while(reader.hasNext()) 
          body += reader.next() + " ";
-      }
+      
       body = body.replace(","," ");
       body = body.replace(".","");
       body = body.replace("("," ");
@@ -32,13 +31,11 @@ public class ReadingLevel {
       body =  body.replace("/", " ");
       
       String[] words = body.split(" ");
-      //System.out.println(body);
-      for(int i=0; i<words.length; i++) {
-         if (words[i].length() != 0) {
-            //System.out.println(words[i].length());
+      for(int i=0; i<words.length; i++) 
+         if (words[i].length() != 0) 
             wordCount.submit(words[i].length());
-         }
-       } 
+         
+       
        System.out.println("title: " + title);
        System.out.println(wordCount);
        
