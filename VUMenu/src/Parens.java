@@ -31,6 +31,11 @@ public class Parens {
 				balanced.push(delim);
 			pointer ++;
 		}
+		if(!balanced.empty()) {
+			isBalanced = false;
+			System.out.println("fuck");
+		} else
+			System.out.println("fuck");
 	}
 	public static boolean isLHS(char c) {
 		if(c== '['||c== '{'||c== '('||c== '<') 

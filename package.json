@@ -1,0 +1,25 @@
+{
+  "name": "echochamber",
+  "version": "0.0.1",
+  "description": "echoes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jack-crawford/code-Nova.git"
+  },
+  "keywords": [
+    "jack"
+  ],
+  "author": "jack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jack-crawford/code-Nova/issues"
+  },
+  "homepage": "https://github.com/jack-crawford/code-Nova#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
