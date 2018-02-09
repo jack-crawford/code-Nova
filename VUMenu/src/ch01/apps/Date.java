@@ -4,7 +4,7 @@
 // Defines date objects having year, month, and day attributes.
 //----------------------------------------------------------------------
 
-package ch01;//.dates;
+package ch01.apps;//.dates;
 
 public class Date
 {

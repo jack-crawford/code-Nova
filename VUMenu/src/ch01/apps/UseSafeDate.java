@@ -7,7 +7,7 @@
 package ch01.apps;
 
 import java.util.Scanner;
-import ch01.dates.*;
+import ch01.apps;//dates.*;
 
 public class UseSafeDate
 {

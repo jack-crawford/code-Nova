@@ -1,3 +1,5 @@
+package ch01.apps;
+
 //----------------------------------------------------------------------
 // SafeDate.java          by Dale/Joyce/Weems                  Chapter 1
 //
@@ -5,7 +7,6 @@
 // some protection from the creation of non-existent dates.
 //----------------------------------------------------------------------
 
-package ch01.dates;
 
 public class SafeDate 
 {
