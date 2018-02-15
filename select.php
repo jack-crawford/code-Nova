@@ -1,5 +1,10 @@
 <?php
 $connect = mysqli_connect("localhost", "root", "p0k3m0n1", "juice");
+function up($connect) {
+  $id = $_POST["id"];
+  $sql = "UPDATE text_content SET count = count+1 WHERE id = '$id';";
+  $result = mysqli_query($connect, $sql);
+}
 function select($connect) {
 
 
@@ -9,8 +14,8 @@ function select($connect) {
         <div class="table-responsive">
              <table class="table table-bordered">
                   <tr>
-                       <th width="40%">Content</th>
-                       <th width="10%">Button</th>
+                       <th width="40%">Stuff</th>
+                       <th width="10%">Buttons</th>
                   </tr>';
    if(mysqli_num_rows($result) > 0)
    {
@@ -19,7 +24,10 @@ function select($connect) {
              $output .= '
                   <tr>
                        <td class="text" data-id1="'.$row["id"].'" contenteditable>'.$row["text"].'</td>
-                       <td><button type="button" name="delete_btn" data-id3="'.$row["id"].'" class="btn btn-xs btn-danger btn_delete">x</button></td>
+                       <td><button type="button" id="button_up" name="up_btn" data-id3="'.$row["id"].'" class="btn btn-xs btn-primary btn_delete"><i class="fa fa-arrow-up"></i></button>
+                       '.$row["count"].'
+                       <button type="button" id="button_down" name="dwn_btn" data-id3="'.$row["id"].'" class="btn btn-xs btn-danger btn_delete"><i class="fa fa-arrow-down"></i></button></td>
+
                   </tr>
              ';
         }
