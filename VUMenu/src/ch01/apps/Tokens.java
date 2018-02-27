@@ -11,7 +11,7 @@ public class Tokens {
 		s3.append(" Beautiful");
 		s1 = "To B oar knot 	2, b";
 		String sNums = "2 3 11 - / 9 +";
-		//sNums = "4 3 *";
+		sNums = "1 4 - 2 3 + ^";
 		StringTokenizer st = new StringTokenizer(sNums);
 		while(st.hasMoreTokens()) {
 			String nextToken = st.nextToken();
@@ -45,6 +45,11 @@ public class Tokens {
 					num = val1 - val2;
 					RPN.push(num);
 					break;
+				case "^": 
+					System.out.println(Math.pow(val1, val2));
+					num = Math.pow(val1, val2);
+					RPN.push(num);
+					break;
 				default:
 					System.out.println("Something weird");
 				}
@@ -56,7 +61,7 @@ public class Tokens {
 		//7 + 11 - 3 
 	}
 	public static boolean isOp(String op) {
-		if (op.equals("*") || op.equals("/") || op.equals("+") || op.equals("-")){
+		if (op.equals("*") || op.equals("/") || op.equals("+") || op.equals("-") || op.equals("^")){
 			return true;
 		} else {
 			return false;
